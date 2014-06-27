@@ -1,0 +1,1 @@
+For this problem we explore the differences between Python dictionaries and Java Maps. Complete the following Java code to get look up a key in a Map. If the key is there, return the value. Otherwise, insert it into the Map with the default value and return the default value.

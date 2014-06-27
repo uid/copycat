@@ -1,0 +1,1 @@
+For this problem we explore the differences between equality in Python and in Java. Following the steps outlined below, test and implement the following method to check the equality of two strings in Java.

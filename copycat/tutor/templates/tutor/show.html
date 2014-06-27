@@ -1,0 +1,63 @@
+{% extends 'tutor/base.html' %}
+
+{% block content %}
+
+{% csrf_token %}
+
+
+<div id = 'content'>
+
+    <div class = "wrapper">
+        <div class = "container_left python">
+            <h1>{{ name }}</h1>
+            <div class = "problem_text">{{problem.problem}}</div>
+            <div id = "next_step">
+                <div id = "step_0"><img id = "step_pointer" src = 'http://localhost:8000/tutor/static/tutor/right.png'>Step 0: Write Input/Output Pairs for Your Test</div></br>
+                <div id = "step_1">Step 1: Compile Your Test Case(s)</div><br>
+                <div id = "step_2">Step 2: Run Your Test(s) Against Instructor Solution</div><br>
+                <div id = "step_3">Step 3: Write and Compile Your Implementation</div><br>
+                <div id = "step_4">Step 4: Run Your Test Case(s) Against Your Implementation</div><br>
+                <div id = "step_5">Step 5: Run Instructor Tests Against Your Implementation</div>
+            </div>
+            <button id = "go">Go</button>
+            <button id = "reset">Reset</button>
+            <div id = "compilation_status"></div>
+        </div>
+        <div class = "container_right java">
+            <form method="post">
+                <div class = "code_container template_code">
+                    <textarea id = "id_response_code" name = "response_code"></textarea>
+                </div>
+            </form>
+            <div id = "student_test" class = "summary">
+                <div class = "test_result_left">
+                    <img id = "student_test_toggler" src = "http://localhost:8000/tutor/static/tutor/down.png" class = "toggler" style = "width: 10px;">
+                    </img>
+                </div>
+                <div class = "test_result_right">
+                    <div class = "student_pairs">
+                        <div id = "inputs">
+                        </div>
+                        <div id = "output">
+                            <span class = "pair_label">Expected Output: </span>
+                            <input class = "pair_text"></input>
+                        </div>
+                    </div>
+                    <div class = "code_container spacing_above">
+                        <textarea id = "student_test_box"></textarea>
+                    </div>
+                    <div class = "message"></div>
+                </div>
+            </div>
+            <div id = "test_results"></div>
+        </div>
+    </div>
+</div>
+
+<div id = "overlay"></div>
+
+{% endblock %}
+
+
+
+

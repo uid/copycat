@@ -1,0 +1,1 @@
+For this problem we will learn how to take substrings of Java strings. Following the steps outlined below, test and implement the following method to compute the prefix of a string of a given length.

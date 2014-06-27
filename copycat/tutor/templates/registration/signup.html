@@ -1,0 +1,28 @@
+{% extends 'tutor/base.html' %}
+
+{% block content %}
+
+{% if errors %}
+{{ errors }}
+{% endif %}
+
+<form method="post" action="/tutor/create">
+{% csrf_token %}
+<table>
+<tr>
+    <td>Username:</td>
+    <td><input id = "id_username" name = "username"></input></td>
+</tr>
+<tr>
+    <td>Password:</td>
+    <td><input id = "id_password" name = "password"></input></td>
+</tr>
+<tr>
+	<td>Password Confirmation:</td>
+	<td><input id = "id_password_confirmation" name = "password_confirmation"></input></td>
+</table>
+
+<button>Sign Up</button>
+</form>
+
+{% endblock %}
